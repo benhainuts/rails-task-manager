@@ -1,0 +1,13 @@
+<h1>Welcome to Task show</h1>
+<div>
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<p><%= @task.completed ? "Tâche Finito" : "tâche a finir"  %></p>
+</div>
+</div>
+<%= link_to "back", tasks_path %>
+</div>
+
+</div>
+<%= link_to "edit", task_edit_path %>
+</div>

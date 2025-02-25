@@ -1,0 +1,11 @@
+<h1>Welcome to Tasks index</h1>
+<div>
+<ul>
+<% @tasks.each do |task|%>
+  <li><%=task.completed%> - <%=link_to task.title, task_path(task)%> - <%=link_to "🚮", destroy_path(task) %> - <%= link_to "🚮",
+  task_path(task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%></li>
+<%end%>
+</ul>
+</div>
